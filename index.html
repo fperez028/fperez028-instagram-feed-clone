@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IG w/ Bootstrap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Banner start -->
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand ps-4" href="#">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+          <div class="d-flex ms-auto">
+            <button type="button" class="btn btn-success me-4" data-bs-toggle="modal" data-bs-target="#newPostModal">Create a new post</button>
+            <div class="btn-group pe-4">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+    <!-- New Post Modal -->
+    <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newPostModalLabel">Create a new post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h6>Caption:</h6>
+            <div class="input-group mb-3"> 
+              <textarea class="form-control" placeholder="Add the caption of your post here"></textarea>
+            </div>
+            <div class="d-flex justify-content-start gap-2 mb-3">
+              <button type="button" class="btn btn-light btn-outline-dark">
+                <i class="fa-solid fa-camera"></i>
+              </button>
+              <button type="button" class="btn btn-light btn-outline-dark">
+                <i class="fa-solid fa-location-dot"></i>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer mt-1">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Nested in Pills: Grid vs. Column Layout-->
+    <div class="container">
+      <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+            <i class="fa-solid fa-table-cells"></i>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+            <i class="fa-solid fa-square"></i>
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="pills-tabContent">
+        <!-- Grid Layout -->
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="container-fluid">
+            <div class="row g-0 row-cols-3">
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row g-0 row-cols-3">
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row g-0 row-cols-3">
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row g-0 row-cols-3">
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+              <div class="col p-1"><img src="https://picsum.photos/400" class="w-100" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <!-- Column Layout using cards -->
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="container-fluid d-flex justify-content-center mb-3">        
+            <div class="card justify-content-center" style="width: 37rem;">
+              <div class="card-header bg-white">
+                <div class="row">
+                  <div class="col d-flex fw-bolder"><h5 class="mt-auto">This is a picture card</h5></div>
+                  <div class="col d-flex fs-6"><p class="ms-auto">10/28</p></div>
+                </div>
+              </div>  
+              <img src="https://picsum.photos/400" style="width: 100%; height: 400px; object-fit: cover;" alt="">
+              <div class="card-body">
+                <p class="card-text"><strong>204 likes</strong></p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid d-flex justify-content-center mb-3">        
+            <div class="card justify-content-center" style="width: 37rem;">
+              <div class="card-header bg-white">
+                <div class="row">
+                  <div class="col d-flex fw-bolder"><h5 class="mt-auto">This is a picture card</h5></div>
+                  <div class="col d-flex fs-6"><p class="ms-auto">10/28</p></div>
+                </div>
+              </div>  
+              <img src="https://picsum.photos/400" style="width: 100%; height: 400px; object-fit: cover;" alt="">
+              <div class="card-body">
+                <p class="card-text"><strong>204 likes</strong></p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid d-flex justify-content-center mb-3">        
+            <div class="card justify-content-center" style="width: 37rem;">
+              <div class="card-header bg-white">
+                <div class="row">
+                  <div class="col d-flex fw-bolder"><h5 class="mt-auto">This is a picture card</h5></div>
+                  <div class="col d-flex fs-6"><p class="ms-auto">10/28</p></div>
+                </div>
+              </div>  
+              <img src="https://picsum.photos/400" style="width: 100%; height: 400px; object-fit: cover;" alt="">
+              <div class="card-body">
+                <p class="card-text"><strong>204 likes</strong></p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid d-flex justify-content-center mb-3">        
+            <div class="card justify-content-center" style="width: 37rem;">
+              <div class="card-header bg-white">
+                <div class="row">
+                  <div class="col d-flex fw-bolder"><h5 class="mt-auto">This is a picture card</h5></div>
+                  <div class="col d-flex fs-6"><p class="ms-auto">10/28</p></div>
+                </div>
+              </div>  
+              <img src="https://picsum.photos/400" style="width: 100%; height: 400px; object-fit: cover;" alt="">
+              <div class="card-body">
+                <p class="card-text"><strong>204 likes</strong></p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
