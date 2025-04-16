@@ -1,5 +1,6 @@
 # See this project live
-https://fperez028-ig-feed-bootstrap.vercel.app/ <br>
+
+https://fperez028-instagram-feed-clone.vercel.app/ <br>
 
 Features to note: <br>
 Only uses Bootstrap, no dedicated CSS file <br>
